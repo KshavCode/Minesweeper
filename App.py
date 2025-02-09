@@ -1,7 +1,6 @@
-import tkinter as tk 
+import tkinter as tk, time, os
 from MapMaker import MapGenerator
 import tkinter.messagebox as tmb
-import time, os
 
 def revealBombs():
     global obj, buttonList
@@ -46,7 +45,8 @@ def recursiveOpen(x, y):
             recursiveOpen(x, y+1)
         if y!=0:
             recursiveOpen(x, y-1)
-
+            
+# MAIN PROGRAM STARTS HERE
 root = tk.Tk()
 root.geometry("600x600")
 root.title("Minesweeper")
